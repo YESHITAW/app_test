@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-digital: 'VT323', monospace;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Chakra Petch', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-digital {
+  font-family: 'VT323', monospace;
+}
+
+.font-tech {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Retro CRT / VFD Glow Effects */
+.text-glow-amber {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.6), 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.6), 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.7), 0 0 20px rgba(239, 68, 68, 0.4);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.box-glow-amber {
+  box-shadow: 0 0 15px -2px rgba(245, 158, 11, 0.4);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 15px -2px rgba(239, 68, 68, 0.5);
+}
+
+/* Cassette Wheel Spin Animations */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-tape {
+  animation: spinSlow 3s linear infinite;
+}
+
+.animate-spin-tape-fast {
+  animation: spinSlow 1s linear infinite;
+}
+
+.animate-spin-tape-reverse {
+  animation: spinSlow 1s linear infinite reverse;
+}
+
+/* Scanline / Tape Texture */
+.tape-stripes {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.speaker-grille {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(20, 20, 25, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 115, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 160, 0.6);
+}

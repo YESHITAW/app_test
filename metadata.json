@@ -1,0 +1,10 @@
+{
+  "name": "Remix EchoTape - Smart Answering Machine",
+  "description": "Retro-modern digital answering machine featuring custom voice greetings, live caller screening, offline IndexedDB audio storage, and automated voice transcription.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
